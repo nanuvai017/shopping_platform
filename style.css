@@ -15,19 +15,21 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo on left, links on right */
     align-items: center;
 }
 
 .logo-section {
     display: flex;
-    align-items: center;
+    flex-direction: column;  /* Stacks logo and site title vertically */
+    align-items: flex-start;
+    margin-left: 20px;
 }
 
 .logo {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .site-title {
@@ -38,7 +40,9 @@ header {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    flex-direction: column;  /* Stacks navigation links vertically */
+    gap: 10px;
+    margin-right: 20px;  /* Right side margin */
 }
 
 .nav-links li a {
@@ -113,4 +117,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 30px;
-}
+    }
