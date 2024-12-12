@@ -1,137 +1,106 @@
-/* General Reset */
+/* রিসেট */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     color: #333;
-    font-size: 16px;
+    background-color: #f8f9fa;
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header nav {
+/* নেভিগেশন বার */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    background-color: #007BFF;
+    padding: 1rem 2rem;
+    color: white;
 }
 
-header .logo h1 {
-    font-size: 24px;
-}
-
-header .nav-links ul {
-    list-style-type: none;
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
-header .nav-links a {
-    color: #fff;
+.nav-links a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-header .nav-links a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+.nav-links a:hover {
+    color: #FFD700;
 }
 
-/* Product Section */
+/* প্রোডাক্ট গ্রিড */
 .products {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
 }
 
 .products h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
 }
 
-.product-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .product {
-    background-color: #fff;
-    padding: 10px;
-    width: 23%;
+    background: white;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 .product h3 {
-    font-size: 20px;
-    margin: 10px 0;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #007BFF;
 }
 
 .product p {
-    font-size: 18px;
-    margin-bottom: 15px;
+    color: #555;
+    font-size: 1rem;
 }
 
-.product a {
+.product .btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
 }
 
-.product a:hover {
-    background-color: #575757;
+.product .btn:hover {
+    background: #0056b3;
 }
 
-/* Footer */
+/* ফুটার */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
-    margin-top: 20px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product {
-        width: 48%;
-    }
-}
-
-@media (max-width: 480px) {
-    .product {
-        width: 100%;
-    }
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
 }
