@@ -33,25 +33,30 @@ body {
     font-size: 24px;
 }
 
+/* ফ্লেক্স লেআউটের জন্য ক্যাটাগরি লিঙ্কগুলো */
 .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;  /* লিঙ্কগুলোর মাঝে ফাঁকা জায়গা */
 }
 
 .nav-links li {
-    margin-left: 20px;
+    display: inline-block;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    padding: 5px 10px;  /* প্রতিটি লিঙ্কের মধ্যে সামান্য প্যাডিং */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ffdd57;
+    background-color: #ffdd57;
 }
 
 /* প্রোডাক্ট সেকশন */
